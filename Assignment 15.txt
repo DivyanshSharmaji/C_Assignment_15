@@ -1,0 +1,302 @@
+Assignment - 15 C Language LIVE Community Classes MySirG
+
+1. Write a recursive function to print first N natural numbers
+2. Write a recursive function to print first N natural numbers in reverse order
+3. Write a recursive function to print first N odd natural numbers
+4. Write a recursive function to print first N odd natural numbers in reverse order
+5. Write a recursive function to print first N even natural numbers
+6. Write a recursive function to print first N even natural numbers in reverse order
+7. Write a recursive function to print squares of first N natural numbers
+8. Write a recursive function to calculate sum of first N natural numbers
+9. Write a recursive function to calculate sum of first N odd natural numbers
+10. Write a recursive function to calculate sum of first N even natural numbers
+11. Write a recursive function to calculate sum of squares of first n natural numbers
+12. Write a recursive function to calculate sum of digits of a given number
+13. Write a recursive function to calculate factorial of a given number
+14. Write a recursive function to find the nth term of Fibonacci series.
+
+Solutions:
+
+Ans-1:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printN(n-1);
+                printf("%d ",n);
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-2:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printf("%d ",n);
+                printN(n-1);
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-3:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printN(n-1);
+                printf("%d ",(2*n-1));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-4:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printf("%d ",(2*n-1));
+                printN(n-1);
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-5:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printN(n-1);
+                printf("%d ",(2*n));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-6:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printf("%d ",(2*n));
+                printN(n-1);
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-7:  #include<stdio.h>
+
+        void printN(int n){
+            if(n>0){
+                printN(n-1);
+                printf("%d ",(n*n));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printN(n);
+        
+            return 0;
+        }
+
+Ans-8:  #include<stdio.h>
+
+        int sum(int n){
+            if(n==1){
+                return 1;
+            }
+            else{
+                return (n+sum(n-1));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("Sum of first %d natural numbers is: %d\n",n,sum(n));
+        
+            return 0;
+        }
+
+Ans-9:  #include<stdio.h>
+
+        int sum(int n){
+            if(n<=1){
+                return 1;
+            }
+            else{
+                return (2*n-1+sum(n-1));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("Sum of first %d odd natural numbers is: %d\n",n,sum(n));
+        
+            return 0;
+        }
+
+Ans-10: #include<stdio.h>
+
+        int sum(int n){
+            if(n<=1){
+                return 2;
+            }
+            else{
+                return (2*n+sum(n-1));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("Sum of first %d even natural numbers is: %d\n",n,sum(n));
+        
+            return 0;
+        }
+
+Ans-11: #include<stdio.h>
+
+        int sum(int n){
+            if(n<=1){
+                return 1;
+            }
+            else{
+                return (n*n+sum(n-1));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("Sum of squares of first %d natural numbers is: %d\n",n,sum(n));
+        
+            return 0;
+        }
+
+Ans-12: #include<stdio.h>
+
+        int sum(int n){
+            int i=10;
+            if(n<=0){
+                return 0;
+            }
+            else{
+                return (n%i+sum(n/10));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("Sum of digits of %d is: %d\n",n,sum(n));
+        
+            return 0;
+        }
+
+Ans-13: #include<stdio.h>
+
+        int fact(int n){
+            if(n==0){
+                return 1;
+            }
+            else{
+                return (n*fact(n-1));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("Factorial of %d is: %d\n",n,fact(n));
+        
+            return 0;
+        }
+
+Ans-14: #include<stdio.h>
+
+        int fib(int n){
+            if(n==1){
+                return 0;
+            }
+            else if(n==2){
+                return 1;
+            }
+            else{
+                return (fib(n-1)+fib(n-2));
+            }
+        }
+
+        int main(){
+        
+            int n;
+            printf("Enter the value of n: ");
+            scanf("%d",&n);
+            printf("%d th term of fibonacci series is: %d\n",n,fib(n));
+        
+            return 0;
+        }
